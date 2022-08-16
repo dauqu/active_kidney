@@ -13,6 +13,7 @@ class _HomeListState extends State<HomeList> {
   @override
   Widget build(BuildContext context) {
     return NestedScrollView(
+      physics: const BouncingScrollPhysics(),
       headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
         return <Widget>[
            SliverAppBar(
@@ -23,7 +24,7 @@ class _HomeListState extends State<HomeList> {
               collapseMode: CollapseMode.parallax,
               title: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
-                children: [
+                children: const [
                   Text(
                     'Active Kidney',
                     style: TextStyle(
@@ -35,7 +36,7 @@ class _HomeListState extends State<HomeList> {
               ),
               
               centerTitle: true,
-              background: Image(
+              background: const Image(
                 image: NetworkImage(
                     'https://images.theconversation.com/files/264074/original/file-20190315-28475-1vh4qe0.jpg'),
               ),
@@ -44,6 +45,7 @@ class _HomeListState extends State<HomeList> {
         ];
       },
       body: ListView.builder(
+        physics: const BouncingScrollPhysics(),
         itemCount: 100,
         itemBuilder: (context, index) {
           return Container(

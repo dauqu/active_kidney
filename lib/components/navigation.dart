@@ -38,6 +38,7 @@ class _NavigationState extends State<Navigation> {
       ),
       drawer: Drawer(
         child: ListView(
+          physics: const BouncingScrollPhysics(),
           padding: EdgeInsets.zero,
           children: <Widget>[
             const DrawerHeader(

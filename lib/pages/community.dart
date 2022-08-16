@@ -41,6 +41,7 @@ class _CommunityState extends State<Community> {
             title: const Text('Community'),
             actions: const [],
             bottom: TabBar(
+              physics: const BouncingScrollPhysics(),
               indicatorWeight: 1.0,
               isScrollable: true,
               splashBorderRadius: BorderRadius.circular(2),
@@ -52,7 +53,7 @@ class _CommunityState extends State<Community> {
               tabs: [
                 for (var i = 0; i < number; i++)
                   Tab(
-                    text: 'Hello $i',
+                    text: 'Category $i',
                   ),
               ],
             ),
@@ -60,9 +61,10 @@ class _CommunityState extends State<Community> {
           body: Center(
             //Dynamic TabBar
             child: TabBarView(
+              physics: const BouncingScrollPhysics(),
               children: [
                 for (var i = 0; i < number; i++)
-                  Center(
+                  const Center(
                     child: HomeList(),
                   ),
               ],
