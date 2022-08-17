@@ -1,9 +1,13 @@
 // ignore: file_names
+import 'package:active_kidney/pages/about.dart';
 import 'package:active_kidney/pages/account.dart';
+import 'package:active_kidney/pages/bug.dart';
 import 'package:active_kidney/pages/champions.dart';
+import 'package:active_kidney/pages/terms.dart';
 import 'package:active_kidney/pages/track.dart';
 import 'package:active_kidney/pages/community.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Navigation extends StatefulWidget {
   const Navigation({Key? key}) : super(key: key);
@@ -13,6 +17,7 @@ class Navigation extends StatefulWidget {
 }
 
 class _NavigationState extends State<Navigation> {
+  late SharedPreferences prefs;
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
     Community(),
@@ -64,9 +69,12 @@ class _NavigationState extends State<Navigation> {
               leading: const Icon(Icons.account_circle),
               title: const Text('Edit my profile'),
               onTap: () {
+                //Open Profile page with editable fields
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Community()),
+                  MaterialPageRoute(
+                    builder: (context) => Account(),
+                  ),
                 );
               },
             ),
@@ -76,7 +84,7 @@ class _NavigationState extends State<Navigation> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Champions()),
+                  MaterialPageRoute(builder: (context) => const About()),
                 );
               },
             ),
@@ -86,7 +94,7 @@ class _NavigationState extends State<Navigation> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Account()),
+                  MaterialPageRoute(builder: (context) => const Terms()),
                 );
               },
             ),
@@ -96,8 +104,16 @@ class _NavigationState extends State<Navigation> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Account()),
+                  MaterialPageRoute(builder: (context) => const Bug()),
                 );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.exit_to_app),
+              title: const Text("Logout"),
+              onTap: () {
+                prefs.clear();
+                Navigator.pushReplacementNamed(context, '/');
               },
             ),
           ],

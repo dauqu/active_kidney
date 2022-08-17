@@ -59,7 +59,7 @@ class _LoginState extends State<Login> {
         );
 
         //Navigate to login page after 3 seconds
-        Timer(Duration(seconds: 3), () {
+        Timer(const Duration(seconds: 2), () {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(

@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:active_kidney/components/list.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -42,6 +43,7 @@ class _AccountState extends State<Account> {
 
       setState(() {
         res_var = json.decode(response.body);
+        print(res_var);
       });
 
       if (response.statusCode == 200) {
@@ -83,8 +85,6 @@ class _AccountState extends State<Account> {
 
   @override
   Widget build(BuildContext context) {
-    
-
     return Scaffold(
         appBar: AppBar(
           backgroundColor: const Color(0xFF707A8A),
@@ -100,25 +100,99 @@ class _AccountState extends State<Account> {
             IconButton(
               splashRadius: 20,
               icon: const Icon(Icons.exit_to_app),
-              onPressed: () {},
+              onPressed: () {
+                prefs.clear();
+                Navigator.pushReplacementNamed(context, '/');
+              },
             ),
           ],
         ),
         body: Container(
-            child: Column(
-          children: [
-            const ListTile(
-              leading: CircleAvatar(
-                radius: 30,
-                backgroundImage: NetworkImage(
-                    "https://www.w3schools.com/howto/img_avatar.png"),
+          padding: const EdgeInsets.all(10),
+          child: Column(
+            children: [
+              const SizedBox(height: 10),
+              ListTile(
+                tileColor: Color.fromARGB(255, 236, 236, 236),
+                leading: const CircleAvatar(
+                  radius: 30,
+                  backgroundImage: NetworkImage(
+                      "https://www.w3schools.com/howto/img_avatar.png"),
+                ),
+                title: Text(
+                  res_var != null
+                      ? res_var['full_name'].toString()
+                      : "Name Not Found",
+                ),
+                subtitle: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const SizedBox(height: 5),
+                    Text(
+                      res_var != null
+                          ? "Email: ${res_var['email']}"
+                          : "Email Not Found",
+                    ),
+                    const SizedBox(height: 5),
+                    Text(
+                      res_var != null
+                          ? "Phone: ${res_var['phone']}"
+                          : "Phone Not Found",
+                    ),
+                    const SizedBox(height: 5),
+                    Text(
+                      res_var != null
+                          ? "Title: ${res_var['title']}"
+                          : "Address Not Found",
+                    ),
+                  ],
+                ),
+                // onTap: () {},
               ),
-              title: Text("Harsh Singh"),
-              subtitle: Text("info@dauqu.com"),
-              // onTap: () {},
-            ),
-
-          ],
-        )));
+              SizedBox(height: 10),
+              ListTile(
+                leading: const Icon(Icons.edit),
+                title: const Text("Edit my profile"),
+                onTap: () {},
+              ),
+              SizedBox(height: 10),
+              ListTile(
+                leading: const Icon(Icons.exit_to_app),
+                title: const Text("Logout"),
+                onTap: () {
+                  prefs.clear();
+                  Navigator.pushReplacementNamed(context, '/');
+                },
+              ),
+              SizedBox(height: 10),
+              ListTile(
+                leading: const Icon(Icons.info),
+                title: const Text("About"),
+                onTap: () {},
+              ),
+              SizedBox(height: 10),
+              ListTile(
+                leading: const Icon(Icons.help),
+                title: const Text("Help"),
+                onTap: () {},
+              ),
+              SizedBox(height: 10),
+              ListTile(
+                leading: const Icon(Icons.settings),
+                title: const Text("Settings"),
+                onTap: () {},
+              ),
+              SizedBox(height: 10),
+              ListTile(
+                leading: const Icon(Icons.exit_to_app),
+                title: const Text("Logout"),
+                onTap: () {
+                  prefs.clear();
+                  Navigator.pushReplacementNamed(context, '/');
+                },
+              ),
+            ],
+          ),
+        ));
   }
 }

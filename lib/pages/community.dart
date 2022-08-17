@@ -22,6 +22,50 @@ class _CommunityState extends State<Community> {
 
   var number = 10;
 
+  //JSON Data
+  var categories = [
+    {
+      'id': 1,
+      'name': 'Atorvastatin',
+    },
+    {
+      'id': 2,
+      'name': 'Levothyroxine',
+    },
+    {
+      'id': 3,
+      'name': 'Lisinopril',
+    },
+    {
+      'id': 4,
+      'name': 'Metformin',
+    },
+    {
+      'id': 5,
+      'name': 'Metoprolol',
+    },
+    {
+      'id': 6,
+      'name': 'Amlodipine',
+    },
+    {
+      'id': 7,
+      'name': 'Albuterol',
+    },
+    {
+      'id': 8,
+      'name': 'Omeprazole',
+    },
+    {
+      'id': 9,
+      'name': 'Losartan',
+    },
+    {
+      'id': 10,
+      'name': 'Gabapentin',
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -51,9 +95,9 @@ class _CommunityState extends State<Community> {
                       width: 4, color: Color.fromARGB(255, 219, 219, 215)),
                   insets: EdgeInsets.symmetric(horizontal: 1)),
               tabs: [
-                for (var i = 0; i < number; i++)
+                for (var i = 0; i < categories.length; i++)
                   Tab(
-                    text: 'Category $i',
+                    text: categories[i]['name'].toString(),
                   ),
               ],
             ),
@@ -63,7 +107,7 @@ class _CommunityState extends State<Community> {
             child: TabBarView(
               physics: const BouncingScrollPhysics(),
               children: [
-                for (var i = 0; i < number; i++)
+                for (var i = 0; i < categories.length; i++)
                   const Center(
                     child: HomeList(),
                   ),

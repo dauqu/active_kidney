@@ -1,5 +1,6 @@
 // import 'package:flutter/src/foundation/key.dart';
 // import 'package:flutter/src/widgets/framework.dart';
+import 'package:active_kidney/pages/add_campaign.dart';
 import 'package:flutter/material.dart';
 
 class Champions extends StatefulWidget {
@@ -30,7 +31,7 @@ class _ChampionsState extends State<Champions> {
             },
           ),
           bottom: TabBar(
-             physics: const BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             indicatorWeight: 1.0,
             isScrollable: true,
             splashBorderRadius: BorderRadius.circular(2),
@@ -62,7 +63,12 @@ class _ChampionsState extends State<Champions> {
                       Icons.add_circle,
                       color: Colors.white,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => AddCampaign()),
+                      );
+                    },
                     label: const Text(
                       "Add Your Champion",
                       style: TextStyle(fontSize: 16, color: Colors.white),
@@ -119,7 +125,7 @@ class _ChampionsState extends State<Champions> {
                   ),
                 ],
               )),
-             Center(
+              Center(
                   child: Column(
                 children: [
                   const SizedBox(height: 40),
@@ -130,8 +136,8 @@ class _ChampionsState extends State<Champions> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(100),
                       image: const DecorationImage(
-                        image:
-                            AssetImage('assets/undraw_Showing_support_re_5f2v.png'),
+                        image: AssetImage(
+                            'assets/undraw_Showing_support_re_5f2v.png'),
                         fit: BoxFit.cover,
                       ),
                     ),
