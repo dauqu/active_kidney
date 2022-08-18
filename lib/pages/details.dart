@@ -31,6 +31,13 @@ class _DetailsState extends State<Details> {
         elevation: 0,
         backgroundColor: const Color(0xFF707A8A),
       ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {},
+        label: const Text('Support'),
+        icon: Icon(Icons.handshake),
+        backgroundColor: Colors.green.shade800,
+      ),
+
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Container(

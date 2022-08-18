@@ -1,7 +1,5 @@
 import 'package:active_kidney/components/list.dart';
 import 'package:flutter/material.dart';
-import 'package:syncfusion_flutter_datepicker/datepicker.dart';
-import 'package:intl/intl.dart';
 
 class Track extends StatefulWidget {
   const Track({Key? key}) : super(key: key);
@@ -16,21 +14,8 @@ class _TrackState extends State<Track> {
   String _range = '';
   String _rangeCount = '';
 
-  void _onSelectionChanged(DateRangePickerSelectionChangedArgs args) {
-    setState(() {
-      if (args.value is PickerDateRange) {
-        _range = '${DateFormat('dd/MM/yyyy').format(args.value.startDate)} -'
-            // ignore: lines_longer_than_80_chars
-            ' ${DateFormat('dd/MM/yyyy').format(args.value.endDate ?? args.value.startDate)}';
-      } else if (args.value is DateTime) {
-        _selectedDate = args.value.toString();
-      } else if (args.value is List<DateTime>) {
-        _dateCount = args.value.length.toString();
-      } else {
-        _rangeCount = args.value.length.toString();
-      }
-    });
-  }
+  TextEditingController campaignController = TextEditingController();
+  TextEditingController dateController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -52,70 +37,165 @@ class _TrackState extends State<Track> {
         padding: const EdgeInsets.all(10),
         child: Column(
           children: <Widget>[
-            Positioned(
-              left: 0,
-              right: 0,
-              top: 0,
-              height: 80,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
+            Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.grey[200],
+                    border: Border.all(
+                      color: Colors.white,
+                      width: 1,
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: TextField(
+                      readOnly: true,
+                      controller: campaignController,
+                      onTap: () {
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return SimpleDialog(
+                              title: const Text('Select Your Campaign'),
+                              children: <Widget>[
+                                SimpleDialogOption(
+                                  onPressed: () {
+                                    setState(() {
+                                      //Set Campaign Name
+                                      campaignController.text =
+                                          'Be specific and use names';
+                                      //Close Dialog
+                                      Navigator.pop(context);
+                                    });
+                                  },
+                                  child:
+                                      const Text('Be specific and use names'),
+                                ),
+                                SimpleDialogOption(
+                                  onPressed: () {
+                                    setState(() {
+                                      //Set Campaign Name
+                                      campaignController.text =
+                                          'Strike the right tone';
+                                      //Close Dialog
+                                      Navigator.pop(context);
+                                    });
+                                  },
+                                  child: const Text('Strike the right tone'),
+                                ),
+                                SimpleDialogOption(
+                                  onPressed: () {
+                                    setState(() {
+                                      //Set Campaign Name
+                                      campaignController.text =
+                                          'Use a little creativity';
+                                      //Close Dialog
+                                      Navigator.pop(context);
+                                    });
+                                  },
+                                  child: const Text('Use a little creativity'),
+                                ),
+                                SimpleDialogOption(
+                                  onPressed: () {
+                                    setState(() {
+                                      //Set Campaign Name
+                                      campaignController.text =
+                                          'Spark interest around your cause';
+                                      //Close Dialog
+                                      Navigator.pop(context);
+                                    });
+                                  },
+                                  child: const Text(
+                                      'Spark interest around your cause'),
+                                ),
+                              ],
+                            );
+                          },
+                        );
+                      },
+                      decoration: const InputDecoration(
+                        icon: Icon(
+                          Icons.campaign,
+                          color: Colors.grey,
+                        ),
+                        border: InputBorder.none,
+                        hintText: 'Select Campaign',
+                        hintStyle: TextStyle(
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ),
+                  ),
+                )),
+            const SizedBox(height: 10),
+            Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.grey[200],
+                    border: Border.all(
+                      color: Colors.white,
+                      width: 1,
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: TextField(
+                      controller: dateController,
+                      readOnly: true,
+                      onTap: () async {
+                        //Show DatePicker
+                        DateTime? newDate = await showDatePicker(
+                          context: context,
+                          initialDate: DateTime.now(),
+                          firstDate: DateTime(2020),
+                          lastDate: DateTime(2025),
+                        );
+
+                        if (newDate != null) {
+                          setState(() {
+                            _selectedDate = newDate.toString();
+                            dateController.text = _selectedDate;
+                            print(_selectedDate);
+                          });
+                        }
+                      },
+                      decoration: const InputDecoration(
+                        icon: Icon(
+                          Icons.date_range,
+                          color: Colors.grey,
+                        ),
+                        border: InputBorder.none,
+                        hintText: 'Select Date',
+                        hintStyle: TextStyle(
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ),
+                  ),
+                )),
+            const SizedBox(height: 10),
+            TextButton(
+              style: ButtonStyle(
+                padding: MaterialStateProperty.all(
+                  const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                ),
+                backgroundColor: MaterialStateProperty.all(
+                  const Color(0xFF707A8A),
+                ),
               ),
-            ),
-            Positioned(
-              left: 0,
-              top: 80,
-              right: 0,
-              bottom: 0,
-              child: SfDateRangePicker(
-                toggleDaySelection: true,
-                onSelectionChanged: _onSelectionChanged,
-                selectionMode: DateRangePickerSelectionMode.range,
-                initialSelectedRange: PickerDateRange(
-                    DateTime.now().subtract(const Duration(days: 4)),
-                    DateTime.now().add(const Duration(days: 3))),
-              ),
-            ),
-            Positioned(
-              left: 0,
-              right: 0,
-              bottom: 0,
-              height: 80,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    '$_selectedDate',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.black,
-                    ),
-                  ),
-                  Text(
-                    '$_range',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.black,
-                    ),
-                  ),
-                  Text(
-                    '$_dateCount',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.black,
-                    ),
-                  ),
-                  Text(
-                    '$_rangeCount',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.black,
-                    ),
-                  ),
-                ],
+              onPressed: () {
+                // Navigator.pushNamed(context, '/home');
+              },
+              child: const Text(
+                'Track',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
               ),
             ),
           ],

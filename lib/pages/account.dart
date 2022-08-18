@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:active_kidney/components/list.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -112,85 +111,70 @@ class _AccountState extends State<Account> {
           child: Column(
             children: [
               const SizedBox(height: 10),
+              //Profile Image
+              Container(
+                height: 200,
+                width: 200,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  image: const DecorationImage(
+                    image: NetworkImage(
+                        "https://www.w3schools.com/howto/img_avatar.png"),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 40),
               ListTile(
                 tileColor: Color.fromARGB(255, 236, 236, 236),
-                leading: const CircleAvatar(
-                  radius: 30,
-                  backgroundImage: NetworkImage(
-                      "https://www.w3schools.com/howto/img_avatar.png"),
-                ),
+                leading: const Icon(Icons.person),
                 title: Text(
                   res_var != null
                       ? res_var['full_name'].toString()
                       : "Name Not Found",
                 ),
-                subtitle: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SizedBox(height: 5),
-                    Text(
-                      res_var != null
-                          ? "Email: ${res_var['email']}"
-                          : "Email Not Found",
-                    ),
-                    const SizedBox(height: 5),
-                    Text(
-                      res_var != null
-                          ? "Phone: ${res_var['phone']}"
-                          : "Phone Not Found",
-                    ),
-                    const SizedBox(height: 5),
-                    Text(
-                      res_var != null
-                          ? "Title: ${res_var['title']}"
-                          : "Address Not Found",
-                    ),
-                  ],
+              ),
+              SizedBox(height: 10),
+              ListTile(
+                leading: const Icon(Icons.email),
+                title: Text(
+                  res_var != null
+                      ? res_var['email'].toString()
+                      : "Email Not Found",
                 ),
-                // onTap: () {},
-              ),
-              SizedBox(height: 10),
-              ListTile(
-                leading: const Icon(Icons.edit),
-                title: const Text("Edit my profile"),
                 onTap: () {},
               ),
               SizedBox(height: 10),
               ListTile(
-                leading: const Icon(Icons.exit_to_app),
-                title: const Text("Logout"),
-                onTap: () {
-                  prefs.clear();
-                  Navigator.pushReplacementNamed(context, '/');
-                },
+                leading: const Icon(Icons.phone),
+                title: Text(
+                  res_var != null
+                      ? res_var['phone'].toString()
+                      : "Phone Not Found",
+                ),
+                onTap: () {},
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               ListTile(
-                leading: const Icon(Icons.info),
-                title: const Text("About"),
+                leading: const Icon(Icons.tag),
+                title: Text(
+                  res_var != null
+                      ? "@${res_var['username']}"
+                      : "UserName Not Found",
+                ),
+                onTap: () {},
+              ),
+              const SizedBox(height: 10),
+              ListTile(
+                leading: const Icon(Icons.title),
+                title: Text(
+                  res_var != null
+                      ? res_var['title'].toString()
+                      : "Title Not Found",
+                ),
                 onTap: () {},
               ),
               SizedBox(height: 10),
-              ListTile(
-                leading: const Icon(Icons.help),
-                title: const Text("Help"),
-                onTap: () {},
-              ),
-              SizedBox(height: 10),
-              ListTile(
-                leading: const Icon(Icons.settings),
-                title: const Text("Settings"),
-                onTap: () {},
-              ),
-              SizedBox(height: 10),
-              ListTile(
-                leading: const Icon(Icons.exit_to_app),
-                title: const Text("Logout"),
-                onTap: () {
-                  prefs.clear();
-                  Navigator.pushReplacementNamed(context, '/');
-                },
-              ),
             ],
           ),
         ));

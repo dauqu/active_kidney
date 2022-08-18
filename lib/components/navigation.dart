@@ -1,6 +1,7 @@
 // ignore: file_names
 import 'package:active_kidney/pages/about.dart';
 import 'package:active_kidney/pages/account.dart';
+import 'package:active_kidney/pages/add_campaign.dart';
 import 'package:active_kidney/pages/bug.dart';
 import 'package:active_kidney/pages/champions.dart';
 import 'package:active_kidney/pages/terms.dart';
@@ -17,7 +18,7 @@ class Navigation extends StatefulWidget {
 }
 
 class _NavigationState extends State<Navigation> {
-  late SharedPreferences prefs;
+   late SharedPreferences prefs;
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
     Community(),
@@ -35,11 +36,17 @@ class _NavigationState extends State<Navigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        elevation: 0,
-        onPressed: () {},
+      floatingActionButton: FloatingActionButton.extended(
         backgroundColor: const Color(0xFF707A8A),
-        child: const Icon(Icons.add),
+        
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const AddCampaign()),
+          );
+        },
+        label: Text('Add Campaign'),
+        icon: Icon(Icons.add),
       ),
       drawer: Drawer(
         child: ListView(
@@ -111,7 +118,8 @@ class _NavigationState extends State<Navigation> {
             ListTile(
               leading: const Icon(Icons.exit_to_app),
               title: const Text("Logout"),
-              onTap: () {
+              onTap: () async {
+                prefs = await SharedPreferences.getInstance();
                 prefs.clear();
                 Navigator.pushReplacementNamed(context, '/');
               },
