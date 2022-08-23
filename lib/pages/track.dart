@@ -1,4 +1,5 @@
 import 'package:active_kidney/components/list.dart';
+import 'package:active_kidney/pages/personal_journal.dart';
 import 'package:flutter/material.dart';
 
 class Track extends StatefulWidget {
@@ -32,6 +33,30 @@ class _TrackState extends State<Track> {
             Scaffold.of(context).openDrawer();
           },
         ),
+        actions: [
+          IconButton(
+            splashRadius: 20,
+            icon: const Icon(Icons.calendar_month),
+            onPressed: () {},
+          ),
+          const SizedBox(
+            width: 10,
+          ),
+          IconButton(
+            splashRadius: 20,
+            icon: const Icon(Icons.book_outlined),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const PersonalJournal()),
+              );
+            },
+          ),
+          const SizedBox(
+            width: 20,
+          ),
+        ],
       ),
       body: Container(
         padding: const EdgeInsets.all(10),
