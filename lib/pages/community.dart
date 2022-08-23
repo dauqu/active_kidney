@@ -20,49 +20,77 @@ class _CommunityState extends State<Community> {
     prefs.remove('isLoggedIn');
   }
 
-  var number = 10;
+  var number = 17;
 
   //JSON Data
   var categories = [
     {
       'id': 1,
-      'name': 'Atorvastatin',
+      'name': 'Latest',
     },
     {
       'id': 2,
-      'name': 'Levothyroxine',
+      'name': 'Wellbeing',
     },
     {
       'id': 3,
-      'name': 'Lisinopril',
+      'name': 'Care Giver',
     },
     {
       'id': 4,
-      'name': 'Metformin',
+      'name': 'Physiotherapy',
     },
     {
       'id': 5,
-      'name': 'Metoprolol',
+      'name': 'Exercise',
     },
     {
       'id': 6,
-      'name': 'Amlodipine',
+      'name': 'Diet',
     },
     {
       'id': 7,
-      'name': 'Albuterol',
+      'name': 'Charity',
     },
     {
       'id': 8,
-      'name': 'Omeprazole',
+      'name': 'Dialysis Address',
     },
     {
       'id': 9,
-      'name': 'Losartan',
+      'name': 'Research',
     },
     {
       'id': 10,
-      'name': 'Gabapentin',
+      'name': 'Survivorship',
+    },
+    {
+      'id': 11,
+      'name': 'News',
+    },
+    {
+      'id': 12,
+      'name': 'Renal Transplant Hospital',
+    },
+    {
+      'id': 13,
+      'name': 'Medicine Order',
+    },
+    {
+      'id': 14,
+      'name': 'Doctor Consultant',
+    },
+    {
+      'id': 15,
+      'name': 'Blood Bank',
+    },
+    {
+      'id': 15,
+      'name': 'Home Dialysis',
+    },
+    {
+      'id': 15,
+      'name': 'Lab Test',
     },
   ];
 
