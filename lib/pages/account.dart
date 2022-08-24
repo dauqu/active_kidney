@@ -32,7 +32,7 @@ class _AccountState extends State<Account> {
     });
     try {
       final response =
-          await http.post(Uri.parse("https://news.chatvait.com/api/v1/profile"),
+          await http.post(Uri.parse("https://kideny.harshaweb.com/api/v1/profile"),
               headers: <String, String>{
                 'Content-Type': 'application/json; charset=UTF-8',
               },

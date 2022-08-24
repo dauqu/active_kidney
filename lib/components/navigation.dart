@@ -1,4 +1,5 @@
 // ignore: file_names
+import 'package:active_kidney/components/log_symptoms.dart';
 import 'package:active_kidney/pages/about.dart';
 import 'package:active_kidney/pages/account.dart';
 import 'package:active_kidney/pages/add_campaign.dart';
@@ -42,10 +43,10 @@ class _NavigationState extends State<Navigation> {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const AddCampaign()),
+            MaterialPageRoute(builder: (context) => const LogSymptoms()),
           );
         },
-        label: Text('Add Campaign'),
+        label: Text('Add'),
         icon: Icon(Icons.add),
       ),
       drawer: Drawer(

@@ -29,7 +29,7 @@ class _RegisterState extends State<Register> {
   Future Register() async {
     try {
       final response = await http.post(
-          Uri.parse("https://news.chatvait.com/api/v1/register"),
+          Uri.parse("https://kideny.harshaweb.com/api/v1/register"),
           headers: <String, String>{
             'Content-Type': 'application/json; charset=UTF-8',
           },

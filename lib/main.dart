@@ -54,7 +54,7 @@ class _CheckLoginState extends State<CheckLogin> {
     });
     try {
       final response = await http.post(
-          Uri.parse("https://news.chatvait.com/api/v1/login/isLoggedIn"),
+          Uri.parse("https://kideny.harshaweb.com/api/v1/login/isLoggedIn"),
           headers: <String, String>{
             'Content-Type': 'application/json; charset=UTF-8',
           },

@@ -31,7 +31,7 @@ class _LoginState extends State<Login> {
   Future Login() async {
     try {
       final response = await http.post(
-          Uri.parse("https://news.chatvait.com/api/v1/login"),
+          Uri.parse("https://kideny.harshaweb.com/api/v1/login"),
           headers: <String, String>{
             'Content-Type': 'application/json; charset=UTF-8',
           },
