@@ -37,7 +37,19 @@ class _TrackState extends State<Track> {
           IconButton(
             splashRadius: 20,
             icon: const Icon(Icons.calendar_month),
-            onPressed: () {},
+            onPressed: () {
+              showDateRangePicker(
+                context: context,
+                firstDate: DateTime(2015, 8),
+                lastDate: DateTime(2101),
+                useRootNavigator: false
+              ).then((value) {
+                setState(() {
+                  _range = value.toString();
+                  _rangeCount = value.toString();
+                });
+              });
+            },
           ),
           const SizedBox(
             width: 10,

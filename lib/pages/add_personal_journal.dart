@@ -104,11 +104,11 @@ class _AddPersonalJournalState extends State<AddPersonalJournal> {
                   SizedBox(
                     height: 10,
                   ),
-                  RaisedButton(
-                    child: Text('Close'),
+                  ElevatedButton(
                     onPressed: () {
                       Navigator.pop(context);
                     },
+                    child: const Text('Close'),
                   ),
                 ],
               ),
