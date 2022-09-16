@@ -16,7 +16,7 @@ class _BugState extends State<Bug> {
       appBar: AppBar(
         title: const Text('Bug'),
         elevation: 0,
-        backgroundColor: const Color(0xFF707A8A),
+        backgroundColor: const Color(0xFF173034),
       ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),

@@ -20,7 +20,7 @@ class _LogSymptomsState extends State<LogSymptoms> {
         appBar: AppBar(
           title: const Text('Log Symptoms'),
           elevation: 0,
-          backgroundColor: const Color(0xFF707A8A),
+          backgroundColor: const Color(0xFF173034),
           leading: IconButton(
             splashRadius: 20,
             icon: const Icon(Icons.arrow_back),

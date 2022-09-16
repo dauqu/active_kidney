@@ -16,7 +16,7 @@ class _AddCampaignState extends State<AddCampaign> {
       appBar: AppBar(
         title: const Text('Add Campaign'),
         elevation: 0,
-        backgroundColor: const Color(0xFF707A8A),
+        backgroundColor: const Color(0xFF173034),
         actions: [
           IconButton(
             splashRadius: 20,

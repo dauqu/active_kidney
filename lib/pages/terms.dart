@@ -16,7 +16,7 @@ class _TermsState extends State<Terms> {
       appBar: AppBar(
         title: const Text('Terms'),
         elevation: 0,
-        backgroundColor: const Color(0xFF707A8A),
+        backgroundColor: const Color(0xFF173034),
       ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),

@@ -85,7 +85,7 @@ class _AccountState extends State<Account> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: const Color(0xFF707A8A),
+          backgroundColor: const Color(0xFF173034),
           elevation: 0,
           title: const Text("Account"),
           actions: [

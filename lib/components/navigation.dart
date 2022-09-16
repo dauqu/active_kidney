@@ -38,7 +38,7 @@ class _NavigationState extends State<Navigation> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(
-        backgroundColor: const Color(0xFF707A8A),
+        backgroundColor: const Color(0xFF173034),
         
         onPressed: () {
           Navigator.push(
@@ -56,7 +56,7 @@ class _NavigationState extends State<Navigation> {
           children: <Widget>[
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Color(0xFF707A8A),
+                color: Color(0xFF173034),
                 image: DecorationImage(
                   image: NetworkImage(
                       'https://images.pond5.com/human-kidney-hologram-footage-133282224_iconl.jpeg'),
@@ -122,6 +122,7 @@ class _NavigationState extends State<Navigation> {
               onTap: () async {
                 prefs = await SharedPreferences.getInstance();
                 prefs.clear();
+                // ignore: use_build_context_synchronously
                 Navigator.pushReplacementNamed(context, '/');
               },
             ),
@@ -152,7 +153,7 @@ class _NavigationState extends State<Navigation> {
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[700],
-        unselectedItemColor: const Color(0xFF707A8A),
+        unselectedItemColor: const Color(0xFF173034),
         onTap: _onItemTapped,
         type: BottomNavigationBarType.fixed,
       ),

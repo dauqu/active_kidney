@@ -24,7 +24,7 @@ class _TrackState extends State<Track> {
       appBar: AppBar(
         title: const Text('Track'),
         elevation: 0,
-        backgroundColor: const Color(0xFF707A8A),
+        backgroundColor: const Color(0xFF173034),
         leading: IconButton(
           splashRadius: 20,
           icon: const Icon(Icons.menu),
@@ -221,7 +221,7 @@ class _TrackState extends State<Track> {
                   const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
                 ),
                 backgroundColor: MaterialStateProperty.all(
-                  const Color(0xFF707A8A),
+                  const Color(0xFF173034),
                 ),
               ),
               onPressed: () {

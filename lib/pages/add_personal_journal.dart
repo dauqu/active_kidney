@@ -126,7 +126,7 @@ class _AddPersonalJournalState extends State<AddPersonalJournal> {
       appBar: AppBar(
         title: const Text('Add Entry'),
         elevation: 0,
-        backgroundColor: const Color(0xFF707A8A),
+        backgroundColor: const Color(0xFF173034),
         leading: IconButton(
           splashRadius: 20,
           icon: const Icon(Icons.arrow_back),
@@ -152,7 +152,7 @@ class _AddPersonalJournalState extends State<AddPersonalJournal> {
                         },
                   style: ElevatedButton.styleFrom(
                     elevation: 0,
-                    primary: const Color(0xFF707A8A),
+                    primary: const Color(0xFF173034),
                     fixedSize: const Size(200, 40),
                   ),
                   child: isLoading

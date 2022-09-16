@@ -102,7 +102,7 @@ class _LoginState extends State<Login> {
           systemOverlayStyle: const SystemUiOverlayStyle(
             statusBarColor: Color(0xFF000000),
           ),
-          backgroundColor: const Color(0xFF4C96F7),
+          backgroundColor: Color(0xFF173034),
           elevation: 0,
           title: const Text('Login'),
         ),
@@ -238,7 +238,7 @@ class _LoginState extends State<Login> {
                       child: TextButton(
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(
-                            const Color(0xFF4C96F7),
+                            const Color(0xFF173034),
                           ),
                         ),
                         onPressed: () {

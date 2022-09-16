@@ -100,7 +100,7 @@ class _CommunityState extends State<Community> {
       length: number,
       child: Scaffold(
           appBar: AppBar(
-            backgroundColor: const Color(0xFF707A8A),
+            backgroundColor: const Color(0xFF173034),
             elevation: 0,
             leading: IconButton(
               splashRadius: 20,

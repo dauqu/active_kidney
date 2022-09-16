@@ -29,7 +29,7 @@ class _DetailsState extends State<Details> {
       appBar: AppBar(
         title: Text(widget.title),
         elevation: 0,
-        backgroundColor: const Color(0xFF707A8A),
+        backgroundColor: const Color(0xFF173034),
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {},
