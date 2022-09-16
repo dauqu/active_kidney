@@ -22,145 +22,145 @@ class _HomeListState extends State<HomeList> {
       'date': '10/10/2020',
       'category': '1',
     },
-    {
-      'id': 2,
-      'title': 'Levothyroxine',
-      'description':
-          'Levothyroxine is a medication that is used to treat high cholesterol.',
-      'image':
-          'https://healthjade.net/wp-content/uploads/2019/04/Levothyroxine.jpg',
-      'date': '10/10/2020',
-      'category': '2',
-    },
-    {
-      'id': 3,
-      'title': 'Lisinopril',
-      'description':
-          'Lisinopril is a medication that is used to treat high blood pressure.',
-      'image': 'https://img.icliniq.com/article/lisinopril-2075.jpg',
-      'date': '10/10/2020',
-      'category': '3',
-    },
-    {
-      'id': 4,
-      'title': 'Metformin',
-      'description':
-          'Metformin is a medication that is used to treat high blood pressure.',
-      'image':
-          'https://www.ilcn.org/wp-content/uploads/2021/12/Stock_metformin-1620x912-1.jpg',
-      'date': '10/10/2020',
-      'category': '4',
-    },
-    {
-      'id': 5,
-      'title': 'Metoprolol',
-      'description':
-          'Metoprolol is a medication that is used to treat high cholesterol.',
-      'image':
-          'https://5.imimg.com/data5/JI/IJ/SN/SELLER-23618296/metoprolol-100-mg-500x500.jpg',
-      'date': '10/10/2020',
-      'category': '5',
-    },
-    {
-      'id': 6,
-      'title': 'Amlodipine',
-      'description':
-          'Amlodipine is a medication that is used to treat high blood pressure.',
-      'image':
-          'https://gardeniapharmacy.com/wp-content/uploads/2021/09/00061209.jpg',
-      'date': '10/10/2020',
-      'category': '6',
-    },
-    {
-      'id': 7,
-      'title': 'Albuterol',
-      'description':
-          'Albuterol is a medication that is used to treat high cholesterol.',
-      'image':
-          'https://rtmagazine.com/wp-content/uploads/2020/02/pharma_generic_albuterolsulfate-1350-1280x640.jpg',
-      'date': '10/10/2020',
-      'category': '7',
-    },
-    {
-      'id': 8,
-      'title': 'Omeprazole',
-      'description':
-          'Omeprazole is a medication that is used to treat high blood pressure.',
-      'image':
-          'https://upload.wikimedia.org/wikipedia/commons/6/64/Omeprazole-3D-balls.png',
-      'date': '10/10/2020',
-      'category': '8',
-    },
-    {
-      'id': 9,
-      'title': 'Losartan',
-      'description':
-          'Losartan is a medication that is used to treat high cholesterol.',
-      'image':
-          'https://cdn.sanity.io/images/0vv8moc6/pharmacytimes/7aceb2b231b4f02149b038c03d92672869ab8809-944x724.png',
-      'date': '10/10/2020',
-      'category': '9',
-    },
-    {
-      'id': 10,
-      'title': 'Gabapentin',
-      'description':
-          'Gabapentin is a medication that is used to treat high blood pressure.',
-      'image':
-          'https://post.healthline.com/wp-content/uploads/2020/09/766x415_Gabapentin_Side_Effects-1-732x415.jpg',
-      'date': '10/10/2020',
-      'category': '10',
-    },
-    {
-      'id': 11,
-      'title': 'Hydrochlorothiazide',
-      'description':
-          'Hydrochlorothiazide is a medication that is used to treat high cholesterol.',
-      'image':
-          'https://thumbs.dreamstime.com/b/hydrochlorothiazide-hctz-hct-molecule-thiazide-diuretic-used-to-treat-edema-hypertension-skeletal-chemical-formula-paper-232504714.jpg',
-      'date': '10/10/2020',
-      'category': '11',
-    },
-    {
-      'id': 12,
-      'title': 'Hydrochlorothiazide',
-      'description':
-          'Hydrochlorothiazide is a medication that is used to treat high blood pressure.',
-      'image':
-          'https://images.mid-day.com/images/images/2022/apr/Pills-a_d.jpg',
-      'date': '10/10/2020',
-      'category': '12',
-    },
-    {
-      'id': 13,
-      'title': 'Hydrochlorothiazide',
-      'description':
-          'Hydrochlorothiazide is a medication that is used to treat high cholesterol.',
-      'image':
-          'https://s3.amazonaws.com/static.wd7.us/b/b0/Hydrochlorothiazide-from-xtal-3D-balls.png',
-      'date': '10/10/2020',
-      'category': '13',
-    },
-    {
-      'id': 14,
-      'title': 'Hydrochlorothiazide',
-      'description':
-          'Hydrochlorothiazide is a medication that is used to treat high blood pressure.',
-      'image':
-          'https://images.mid-day.com/images/images/2022/apr/Pills-a_d.jpg',
-      'date': '10/10/2020',
-      'category': '14',
-    },
-    {
-      'id': 15,
-      'title': 'Hydrochlorothiazide',
-      'description':
-          'Hydrochlorothiazide is a medication that is used to treat high blood pressure.',
-      'image':
-          'https://drugs.selfdecode.com/app/uploads/2020/01/Hydrochlorothiazide-Side-Effects-Possible-Alternatives.jpg',
-      'date': '10/10/2020',
-      'category': '15',
-    },
+    // {
+    //   'id': 2,
+    //   'title': 'Levothyroxine',
+    //   'description':
+    //       'Levothyroxine is a medication that is used to treat high cholesterol.',
+    //   'image':
+    //       'https://healthjade.net/wp-content/uploads/2019/04/Levothyroxine.jpg',
+    //   'date': '10/10/2020',
+    //   'category': '2',
+    // },
+    // {
+    //   'id': 3,
+    //   'title': 'Lisinopril',
+    //   'description':
+    //       'Lisinopril is a medication that is used to treat high blood pressure.',
+    //   'image': 'https://img.icliniq.com/article/lisinopril-2075.jpg',
+    //   'date': '10/10/2020',
+    //   'category': '3',
+    // },
+    // {
+    //   'id': 4,
+    //   'title': 'Metformin',
+    //   'description':
+    //       'Metformin is a medication that is used to treat high blood pressure.',
+    //   'image':
+    //       'https://www.ilcn.org/wp-content/uploads/2021/12/Stock_metformin-1620x912-1.jpg',
+    //   'date': '10/10/2020',
+    //   'category': '4',
+    // },
+    // {
+    //   'id': 5,
+    //   'title': 'Metoprolol',
+    //   'description':
+    //       'Metoprolol is a medication that is used to treat high cholesterol.',
+    //   'image':
+    //       'https://5.imimg.com/data5/JI/IJ/SN/SELLER-23618296/metoprolol-100-mg-500x500.jpg',
+    //   'date': '10/10/2020',
+    //   'category': '5',
+    // },
+    // {
+    //   'id': 6,
+    //   'title': 'Amlodipine',
+    //   'description':
+    //       'Amlodipine is a medication that is used to treat high blood pressure.',
+    //   'image':
+    //       'https://gardeniapharmacy.com/wp-content/uploads/2021/09/00061209.jpg',
+    //   'date': '10/10/2020',
+    //   'category': '6',
+    // },
+    // {
+    //   'id': 7,
+    //   'title': 'Albuterol',
+    //   'description':
+    //       'Albuterol is a medication that is used to treat high cholesterol.',
+    //   'image':
+    //       'https://rtmagazine.com/wp-content/uploads/2020/02/pharma_generic_albuterolsulfate-1350-1280x640.jpg',
+    //   'date': '10/10/2020',
+    //   'category': '7',
+    // },
+    // {
+    //   'id': 8,
+    //   'title': 'Omeprazole',
+    //   'description':
+    //       'Omeprazole is a medication that is used to treat high blood pressure.',
+    //   'image':
+    //       'https://upload.wikimedia.org/wikipedia/commons/6/64/Omeprazole-3D-balls.png',
+    //   'date': '10/10/2020',
+    //   'category': '8',
+    // },
+    // {
+    //   'id': 9,
+    //   'title': 'Losartan',
+    //   'description':
+    //       'Losartan is a medication that is used to treat high cholesterol.',
+    //   'image':
+    //       'https://cdn.sanity.io/images/0vv8moc6/pharmacytimes/7aceb2b231b4f02149b038c03d92672869ab8809-944x724.png',
+    //   'date': '10/10/2020',
+    //   'category': '9',
+    // },
+    // {
+    //   'id': 10,
+    //   'title': 'Gabapentin',
+    //   'description':
+    //       'Gabapentin is a medication that is used to treat high blood pressure.',
+    //   'image':
+    //       'https://post.healthline.com/wp-content/uploads/2020/09/766x415_Gabapentin_Side_Effects-1-732x415.jpg',
+    //   'date': '10/10/2020',
+    //   'category': '10',
+    // },
+    // {
+    //   'id': 11,
+    //   'title': 'Hydrochlorothiazide',
+    //   'description':
+    //       'Hydrochlorothiazide is a medication that is used to treat high cholesterol.',
+    //   'image':
+    //       'https://thumbs.dreamstime.com/b/hydrochlorothiazide-hctz-hct-molecule-thiazide-diuretic-used-to-treat-edema-hypertension-skeletal-chemical-formula-paper-232504714.jpg',
+    //   'date': '10/10/2020',
+    //   'category': '11',
+    // },
+    // {
+    //   'id': 12,
+    //   'title': 'Hydrochlorothiazide',
+    //   'description':
+    //       'Hydrochlorothiazide is a medication that is used to treat high blood pressure.',
+    //   'image':
+    //       'https://images.mid-day.com/images/images/2022/apr/Pills-a_d.jpg',
+    //   'date': '10/10/2020',
+    //   'category': '12',
+    // },
+    // {
+    //   'id': 13,
+    //   'title': 'Hydrochlorothiazide',
+    //   'description':
+    //       'Hydrochlorothiazide is a medication that is used to treat high cholesterol.',
+    //   'image':
+    //       'https://s3.amazonaws.com/static.wd7.us/b/b0/Hydrochlorothiazide-from-xtal-3D-balls.png',
+    //   'date': '10/10/2020',
+    //   'category': '13',
+    // },
+    // {
+    //   'id': 14,
+    //   'title': 'Hydrochlorothiazide',
+    //   'description':
+    //       'Hydrochlorothiazide is a medication that is used to treat high blood pressure.',
+    //   'image':
+    //       'https://images.mid-day.com/images/images/2022/apr/Pills-a_d.jpg',
+    //   'date': '10/10/2020',
+    //   'category': '14',
+    // },
+    // {
+    //   'id': 15,
+    //   'title': 'Hydrochlorothiazide',
+    //   'description':
+    //       'Hydrochlorothiazide is a medication that is used to treat high blood pressure.',
+    //   'image':
+    //       'https://drugs.selfdecode.com/app/uploads/2020/01/Hydrochlorothiazide-Side-Effects-Possible-Alternatives.jpg',
+    //   'date': '10/10/2020',
+    //   'category': '15',
+    // },
   ];
   @override
   Widget build(BuildContext context) {

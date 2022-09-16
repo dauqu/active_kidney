@@ -135,11 +135,13 @@ class _LoginState extends State<Login> {
                       height: 20,
                     ),
 
-                    Lottie.network(
-                        'https://assets10.lottiefiles.com/packages/lf20_cgjrfdzx.json',
-                        height: 150,
-                        width: 150,
-                        repeat: true),
+                    // Lottie.network(
+                    //     'https://assets10.lottiefiles.com/packages/lf20_cgjrfdzx.json',
+                    //     height: 150,
+                    //     width: 150,
+                    //     repeat: true),
+                    Image.asset("assets/logo.jpeg",
+                        height: 150, width: 150),
                     //SizedBox
                     const SizedBox(
                       height: 40,

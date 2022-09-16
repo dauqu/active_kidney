@@ -64,6 +64,7 @@ flutter:
   assets:
     - assets/undraw_feeling_blue_4b7q.png
     - assets/undraw_Showing_support_re_5f2v.png
+    - assets/logo.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

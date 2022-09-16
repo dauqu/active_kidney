@@ -42,7 +42,6 @@ class _AccountState extends State<Account> {
 
       setState(() {
         res_var = json.decode(response.body);
-        print(res_var);
       });
 
       if (response.statusCode == 200) {
